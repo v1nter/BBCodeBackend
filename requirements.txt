@@ -13,6 +13,7 @@ django-extensions==3.1.1
 django-heroku==0.3.1
 djangorestframework==3.12.2
 djangorestframework-jwt==1.11.0
+gunicorn==20.0.4
 idna==2.10
 imgurpython==1.1.7
 ipython==7.20.0
