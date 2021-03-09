@@ -324,8 +324,8 @@ def ImgurGet(request):
 
     if request.method == 'GET':
 
-        client_id = '4e9bcb4fb8cf695'
-        client_secret = '8dde75838f57f75e0345904cdddfa2a11b4e640d'
+        client_id = CLIENT
+        client_secret = SECRET
         client = ImgurClient(client_id, client_secret)
         authorization_url = client.get_auth_url('pin')
 
@@ -340,8 +340,8 @@ def ImgurPost(request):
 
     if request.method == 'POST':
 
-        client_id = '4e9bcb4fb8cf695'
-        client_secret = '8dde75838f57f75e0345904cdddfa2a11b4e640d'
+        client_id = CLIENT
+        client_secret = SECRET
         client = ImgurClient(client_id, client_secret)
 
         pin = request.data['pin']

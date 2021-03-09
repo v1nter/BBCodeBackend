@@ -10,6 +10,9 @@ from webdriver_manager.chrome import ChromeDriverManager
 from imgurpython import ImgurClient
 from bbcapi.models import *
 
+from bbcapi.constants import *
+
+
 ##################################################################
 #
 # Beinhaltet alle wichtigen Funktionen zu Kommunikation
@@ -48,8 +51,8 @@ def imgurUploadImage(URL, platform=False):
     #
     ##################
 
-    client_id = '4e9bcb4fb8cf695'
-    client_secret = '8dde75838f57f75e0345904cdddfa2a11b4e640d'
+    client_id = CLIENT
+    client_secret = SECRET
 
     # Hole aktuelles Refresh-Token/Access-Token-Paar
     imgur = Imgur.objects.filter(current_login=True)
@@ -97,8 +100,8 @@ def imgureDeleteAlbum(album_id):
     #
     ###########################################################################
 
-    client_id = '4e9bcb4fb8cf695'
-    client_secret = '8dde75838f57f75e0345904cdddfa2a11b4e640d'
+    client_id = CLIENT
+    client_secret = SECRET
 
     imgur = Imgur.objects.filter(current_login=True)
     access_token = imgur.values()[0]['imgur_access_token']
@@ -120,8 +123,8 @@ def imgurCreateAlbum(Title):
     #
     ##################################################################
 
-    client_id = '4e9bcb4fb8cf695'
-    client_secret = '8dde75838f57f75e0345904cdddfa2a11b4e640d'
+    client_id = CLIENT
+    client_secret = SECRET
 
     # Hole aktuelles Refresh-Token/Access-Token-Paar
     imgur = Imgur.objects.filter(current_login=True)
@@ -164,8 +167,8 @@ def imgurAuth():
     #
     ##################################################################
 
-    client_id = '4e9bcb4fb8cf695'
-    client_secret = '8dde75838f57f75e0345904cdddfa2a11b4e640d'
+    client_id = CLIENT
+    client_secret = SECRET
     client_user = 'V1nter'
     client_pw = '0N1hWHMKpIMGcwT9'
 

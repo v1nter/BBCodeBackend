@@ -24,3 +24,6 @@ BBCODE_TABLE_BOTTOM = (
 )
 
 BBCODE_EMPTY_ROW = '                       '
+
+SECRET = '96ac02964d489e927e97f3d7ebb7e73eeba37fb7'
+CLIENT = '99d4666e4b06d2f'
