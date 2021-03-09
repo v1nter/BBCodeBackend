@@ -49,7 +49,7 @@ def imgurUploadImage(URL, platform=False):
     ##################
 
     client_id = '4e9bcb4fb8cf695'
-    client_secret = '2e5400af8caef2ff4e11c5bd11f917d8fc6a9ef6'
+    client_secret = '8dde75838f57f75e0345904cdddfa2a11b4e640d'
 
     # Hole aktuelles Refresh-Token/Access-Token-Paar
     imgur = Imgur.objects.filter(current_login=True)
@@ -98,7 +98,7 @@ def imgureDeleteAlbum(album_id):
     ###########################################################################
 
     client_id = '4e9bcb4fb8cf695'
-    client_secret = '2e5400af8caef2ff4e11c5bd11f917d8fc6a9ef6'
+    client_secret = '8dde75838f57f75e0345904cdddfa2a11b4e640d'
 
     imgur = Imgur.objects.filter(current_login=True)
     access_token = imgur.values()[0]['imgur_access_token']
@@ -121,7 +121,7 @@ def imgurCreateAlbum(Title):
     ##################################################################
 
     client_id = '4e9bcb4fb8cf695'
-    client_secret = '2e5400af8caef2ff4e11c5bd11f917d8fc6a9ef6'
+    client_secret = '8dde75838f57f75e0345904cdddfa2a11b4e640d'
 
     # Hole aktuelles Refresh-Token/Access-Token-Paar
     imgur = Imgur.objects.filter(current_login=True)
@@ -165,7 +165,7 @@ def imgurAuth():
     ##################################################################
 
     client_id = '4e9bcb4fb8cf695'
-    client_secret = '2e5400af8caef2ff4e11c5bd11f917d8fc6a9ef6'
+    client_secret = '8dde75838f57f75e0345904cdddfa2a11b4e640d'
     client_user = 'V1nter'
     client_pw = '0N1hWHMKpIMGcwT9'
 
