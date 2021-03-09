@@ -53,7 +53,7 @@ else:
 
     print('else')
     DEBUG = False
-    ALLOWED_HOSTS = ['bbcode-generator.herokuapp.com']
+    ALLOWED_HOSTS = ['*']
     CORS_ORIGIN_ALLOW_ALL = True
     DATABASES = {
        'default': {
