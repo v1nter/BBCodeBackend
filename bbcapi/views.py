@@ -142,7 +142,9 @@ def EventDetailView(request, pk):
     elif request.method == 'DELETE':
 
         album = events.event_album
-        imgureDeleteAlbum(album)
+
+        if album:
+            imgureDeleteAlbum(album)
 
         events.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
