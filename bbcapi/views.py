@@ -476,7 +476,7 @@ def GameView(request):
             games = Game.objects.all()
 
         if search != "":
-            games = games.filter(game_name__contains = search)
+            games = games.filter(game_name__icontains = search)
 
         serializer = GameSerializerGet(
             games,
