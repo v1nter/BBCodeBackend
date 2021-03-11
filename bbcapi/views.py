@@ -468,12 +468,15 @@ def GameView(request):
     if request.method == 'GET':
 
         delta = request.GET['delta']
+        search = request.GET['search']
 
         if delta=="true":
             games = Game.objects.filter(DeltaYesNo="True")
         else:
             games = Game.objects.all()
 
+        if search != "":
+            games = games.filter(game_name__contains = search)
 
         serializer = GameSerializerGet(
             games,
