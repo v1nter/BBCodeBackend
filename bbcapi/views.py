@@ -468,7 +468,11 @@ def GameView(request):
     if request.method == 'GET':
 
         delta = request.GET['delta']
-        search = request.GET['search']
+
+        try:
+            search = request.GET['search']
+        except:
+            search = ""
 
         if delta=="true":
             games = Game.objects.filter(DeltaYesNo="True")
