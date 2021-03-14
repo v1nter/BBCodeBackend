@@ -477,6 +477,11 @@ def GameView(request):
         except:
             search = ""
 
+        try:
+            needs_update = request.GET['needs_update']
+        except:
+            needs_update = ""
+
         if delta=="true":
             games = Game.objects.filter(DeltaYesNo="True")
         else:
@@ -484,6 +489,9 @@ def GameView(request):
 
         if search != "":
             games = games.filter(game_name__icontains = search)
+
+        if needs_update == "true":
+            games = games.filter(game_needs_update = True)
 
         serializer = GameSerializerGet(
             games,
