@@ -65,6 +65,7 @@ class Game(models.Model):
     DeltaYesNo = models.BooleanField(default=False)
     game_description = models.CharField(max_length=200, default="")
     game_production = models.CharField(max_length=200, default="")
+    game_needs_update = models.BooleanField(default=True)
 
     class Meta:
         ordering = ['game_name']

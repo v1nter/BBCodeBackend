@@ -467,7 +467,10 @@ def GameView(request):
     ###########################################################################
     if request.method == 'GET':
 
-        delta = request.GET['delta']
+        try:
+            delta = request.GET['delta']
+        except:
+            delta= ""
 
         try:
             search = request.GET['search']

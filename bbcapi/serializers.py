@@ -89,6 +89,7 @@ class GameSerializerGet(serializers.ModelSerializer):
                   'DeltaYesNo',
                   'game_description',
                   'game_production',
+                  'game_needs_update',
                   )
 
 class GameSerializerPost(serializers.ModelSerializer):
@@ -120,6 +121,7 @@ class GameSerializerPut(serializers.ModelSerializer):
                   'DeltaYesNo',
                   'game_description',
                   'game_production',
+                  'game_needs_update',
                   )
 
         extra_kwargs = {
