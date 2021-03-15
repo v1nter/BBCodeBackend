@@ -234,7 +234,7 @@ def BbcodeView(request, delta=False):
 
             game_row.append('[img]{}[/img]'.format(keyart_url))
             game_row.append(' ')
-            game_row.append('{}\n\n{}\n{}\n{}'.format('[u]' + game_name + '[/u]', '→ ' + game_description, '→ ' + game_release, '→ ' + game_production))#"".join(all_trailer), BBCODE_EMPTY_ROW))
+            game_row.append('{}\n\n{}\n{}\n{}\n{}'.format('[u]' + game_name + '[/u]', '→ ' + game_description, '→ ' + game_release, '→ ' + game_production, BBCODE_EMPTY_ROW))#"".join(all_trailer), BBCODE_EMPTY_ROW))
             game_row.append(' ')
             game_row.append('{}\n{}\n'.format("".join(all_trailer), BBCODE_EMPTY_ROW))
             game_row.append(' ')
