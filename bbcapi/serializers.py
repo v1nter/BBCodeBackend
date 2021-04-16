@@ -139,3 +139,9 @@ class GameSerializerPut(serializers.ModelSerializer):
                    },
 
              }
+
+class BaseSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = BaseData
+        fields = ('id', 'show_hidden_games')

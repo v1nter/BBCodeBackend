@@ -67,5 +67,12 @@ urlpatterns = [
     #
     ###########################################################################
     re_path(r'^bbcapi/bbcode/$', views.BbcodeView),
-    #re_path(r'^bbcapi/keyart/([0-9]+)$', views.KeyartDetailView),
+
+    ###########################################################################
+    #
+    # Stammdaten
+    #
+    ###########################################################################
+    re_path(r'^bbcapi/base/$', views.BaseViewGet),
+    re_path(r'^bbcapi/base/([0-9]+)$', views.BaseViewPut),
 ]

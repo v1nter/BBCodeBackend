@@ -32,7 +32,7 @@ class Imgur(models.Model):
     current_login = models.BooleanField(default=False)
 
     def __str__(self):
-        return self.access_token
+        return self.imgur_access_token
 
 ###############################################################################
 #
@@ -66,6 +66,7 @@ class Game(models.Model):
     game_description = models.CharField(max_length=200, default="")
     game_production = models.CharField(max_length=200, default="")
     game_needs_update = models.BooleanField(default=True)
+    game_hidden = models.BooleanField(default=False)
 
     class Meta:
         ordering = ['game_name']
@@ -91,3 +92,6 @@ class Trailer(models.Model):
     def __str__(self):
 
         return self.trailer_name
+
+class BaseData(models.Model):
+    show_hidden_games = models.BooleanField(default=True)

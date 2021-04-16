@@ -683,5 +683,58 @@ def TrailerDetailView(request, pk):
         trailers.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
 
+@api_view(['GET'])
+def BaseViewGet(request):
+
+    if request.method == 'GET':
+        base = BaseData.objects.all()
+
+        serializer = BaseSerializer(
+            base,
+            context={'request': request},
+            many = True
+        )
+
+        return Response(serializer.data)
+
+@api_view(['PUT', 'GET'])
+def BaseViewPut(request, pk):
+
+    try:
+        bases = BaseData.objects.get(pk=pk)
+    except Base.DoesNotExist:
+        return Response(status=status.HTTP_404_NOT_FOUND)
+
+    if request.method == 'PUT':
+
+        serializer = BaseSerializer(
+            bases,
+            data=request.data,
+            context={'request': request},
+        )
+
+        if serializer.is_valid():
+            serializer.save()
+
+            return Response(status.HTTP_204_NO_CONTENT)
+
+        print("--------------")
+        print(serializer.errors)
+        print("--------------")
+
+        return Response(status=status.HTTP_404_NOT_FOUND)
+
+    if request.method == 'GET':
+        if request.method == 'GET':
+
+            serializer = BaseSerializer(
+                bases,
+                context={'request': request},
+            )
+
+            return Response(serializer.data)
+
+
+
 
 ### KOMMENTAR, DAMIT BEIM SPEICHERN NICHT IMMER DIE LEEREN ZEILEN GELÖSCHT WERDEN ####
