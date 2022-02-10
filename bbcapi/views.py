@@ -212,6 +212,7 @@ def BbcodeView(request, delta=False):
 
             # Keyart in kleiner Größe
             keyart = game.game_keyart
+            keyart_big = game.game_keyart
             url, suffix = keyart.rsplit('.', 1)
             keyart_url = '{}m.{}'.format(url, suffix)
 
@@ -232,7 +233,8 @@ def BbcodeView(request, delta=False):
 
             # Sammle alle Spieldaten in game_row
 
-            game_row.append('[img]{}[/img]'.format(keyart_url))
+            #game_row.append('[img]{}[/img]'.format(keyart_url))
+            game_row.append('[url='+ keyart_big +'][img]{}[/img][/url]'.format(keyart_url))
             game_row.append(' ')
             # game_row.append('{}\n\n{}\n{}\n{}\n{}'.format('[u]' + game_name + '[/u]', '→ ' + game_description, '→ ' + game_release, '→ ' + game_production, BBCODE_EMPTY_ROW))#"".join(all_trailer), BBCODE_EMPTY_ROW))
             ####################################################################
