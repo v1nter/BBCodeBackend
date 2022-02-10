@@ -214,7 +214,7 @@ def BbcodeView(request, delta=False):
             keyart = game.game_keyart
             keyart_big = game.game_keyart
             url, suffix = keyart.rsplit('.', 1)
-            keyart_url = '{}m.{}'.format(url, suffix)
+            keyart_url = '{}l.{}'.format(url, suffix)
 
             # Plattformen, in drei Reihen formatiert
             game_platforms = platformsinthree(game)
